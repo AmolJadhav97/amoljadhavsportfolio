@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Node
+node_modules/
+
+# Environment / secrets
+.env
+.env.*
+
+# IDEs
+.vscode/
+.idea/
+
+# Keys and certificates
+*.pem
+*.key
+
+# Logs
+*.log
+
+# Build / distribution
+dist/
+build/
+.coverage
+
+#Optional: keep media private (uncomment if you DO NOT want media published)
+#assets/media/
+#assets/media/*.pdf
+
+# Misc
+Thumbs.db

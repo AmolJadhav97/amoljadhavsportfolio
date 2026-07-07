@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amol Jadhav — Senior Azure DevOps Engineer &amp; AI Automation Specialist</title>
+<meta name="description" content="Amol Jadhav — Senior Azure DevOps Engineer and AI Automation Specialist. 7 years building enterprise CI/CD platforms, Kubernetes automation and Azure OpenAI-powered DevOps.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <svg class="loader-mark" viewBox="0 0 48 48" fill="none">
+      <path d="M24 4 L42 14 V34 L24 44 L6 34 V14 Z" stroke="url(#loaderGrad)" stroke-width="2"/>
+      <path class="loader-mark-fill" d="M24 4 L42 14 V34 L24 44 L6 34 V14 Z" stroke="url(#loaderGrad)" stroke-width="2"/>
+      <defs>
+        <linearGradient id="loaderGrad" x1="0" y1="0" x2="48" y2="48">
+          <stop offset="0" stop-color="#4FC3F7"/>
+          <stop offset="1" stop-color="#00E5FF"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <p class="loader-text">Provisioning experience<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+  </div>
+</div>
+
+<!-- ============ AMBIENT BACKGROUND ============ -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-aurora" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<!-- ============ PIPELINE RAIL (signature element) ============ -->
+<nav class="pipeline-rail" aria-label="Page progress">
+  <ol>
+    <li data-target="hero"><span class="node"></span><span class="rail-label">Arrival</span></li>
+    <li data-target="who"><span class="node"></span><span class="rail-label">Who Am I</span></li>
+    <li data-target="journey"><span class="node"></span><span class="rail-label">Journey</span></li>
+    <li data-target="impact"><span class="node"></span><span class="rail-label">Impact</span></li>
+    <li data-target="tech"><span class="node"></span><span class="rail-label">Technology</span></li>
+    <li data-target="ai"><span class="node"></span><span class="rail-label">AI &amp; Automation</span></li>
+    <li data-target="training"><span class="node"></span><span class="rail-label">Training</span></li>
+    <li data-target="about"><span class="node"></span><span class="rail-label">About</span></li>
+    <li data-target="contact"><span class="node"></span><span class="rail-label">Contact</span></li>
+  </ol>
+  <div class="rail-line"><div class="rail-line-fill"></div></div>
+</nav>
+
+<!-- ============ NAVIGATION ============ -->
+<header class="site-nav" id="site-nav">
+  <a href="#hero" class="nav-logo">AMOL JADHAV</a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#hero">Home</a>
+    <a href="#journey">Journey</a>
+    <a href="#about">About Me</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="#hero">Home</a>
+  <a href="#journey">Journey</a>
+  <a href="#about">About Me</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<main>
+
+  <!-- ============ SCENE 1 — HERO ============ -->
+  <section class="scene hero" id="hero">
+    <div class="hero-content glow-card">
+      <p class="eyebrow reveal-up">Senior Azure DevOps Engineer · AI &amp; Automation Specialist</p>
+      <h1 class="hero-title" id="hero-title">
+        <span class="line" data-split>Amol Jadhav</span>
+      </h1>
+      <div class="infinity-wrap" aria-hidden="true">
+        <svg class="infinity-svg" viewBox="0 0 920 360" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+          <path id="inf-path" d="M120,180 C120,56 280,56 320,180 C360,304 520,304 520,180 C520,56 680,56 680,180 C680,304 840,304 840,180" fill="none" stroke="rgba(255,255,255,0.24)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+          <div class="inf-travel-glow" aria-hidden="true"></div>
+        <img class="inf-icon icon-1" src="https://cdn.simpleicons.org/jira/2E5AAC" alt="Jira icon">
+        <img class="inf-icon icon-2" src="https://cdn.simpleicons.org/git/F05032" alt="Git icon">
+        <img class="inf-icon icon-3" src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub icon">
+        <img class="inf-icon icon-4" src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="GitLab icon">
+        <img class="inf-icon icon-5" src="assets/icons/azuredevops.png" alt="Azure DevOps icon">
+        <img class="inf-icon icon-6" src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins icon">
+        <img class="inf-icon icon-7" src="https://cdn.simpleicons.org/yaml/CB171E" alt="YAML icon">
+        <img class="inf-icon icon-8" src="assets/icons/nexus.png" alt="Nexus icon">
+        <img class="inf-icon icon-9" src="assets/icons/sonarqube.png" alt="SonarQube icon">
+        <img class="inf-icon icon-10" src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker icon">
+        <img class="inf-icon icon-11" src="https://cdn.simpleicons.org/terraform/844FBA" alt="Terraform icon">
+        <img class="inf-icon icon-12" src="https://cdn.simpleicons.org/kubernetes/4FC3F7" alt="AKS icon">
+        <img class="inf-icon icon-13" src="assets/icons/argocd.png" alt="Argo CD icon">
+        <img class="inf-icon icon-14" src="https://cdn.simpleicons.org/rancher/0075A8" alt="Rancher icon">
+        <img class="inf-icon icon-15" src="assets/icons/microsoftazure.png" alt="Microsoft Azure icon">
+        <img class="inf-icon icon-16" src="assets/icons/amazonaws.png" alt="AWS icon">
+        <img class="inf-icon icon-17" src="https://cdn.simpleicons.org/dynatrace/1496FF" alt="Dynatrace icon">
+        <img class="inf-icon icon-18" src="https://cdn.simpleicons.org/vault/FFEC6E" alt="Vault icon">
+        <img class="inf-icon icon-19" src="assets/icons/servicenow.svg" alt="ServiceNow icon">
+        <img class="inf-icon icon-20" src="https://cdn.simpleicons.org/githubcopilot/FFFFFF" alt="GitHub Copilot icon">
+        <img class="inf-icon icon-21" src="https://cdn.simpleicons.org/python/4FC3F7" alt="Python icon">
+        <img class="inf-icon icon-22" src="https://cdn.simpleicons.org/linux/FFFFFF" alt="Linux icon">
+      </div>
+      <div class="hero-rotator" aria-live="polite">
+        <span class="rotator-word is-active">Building enterprise cloud platforms</span>
+        <span class="rotator-word">Automating complex workflows</span>
+        <span class="rotator-word">Engineering reliable CI/CD systems</span>
+        <span class="rotator-word">Turning manual process into intelligent automation</span>
+        <span class="rotator-word">Creating AI-powered DevOps solutions</span>
+      </div>
+        <div class="hero-ctas reveal-up" style="--delay:0.5s">
+        <a href="#journey" class="btn btn-primary">Explore My Journey</a>
+        <a href="assets/media/Amol_Jadhav_DevOps.pdf" class="btn btn-secondary" download>Download Résumé</a>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-mouse"><span class="scroll-dot"></span></span>
+      <span class="scroll-text">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 2 — WHO AM I ============ -->
+  <section class="scene who" id="who">
+    <div class="scene-inner who-grid">
+        <div class="who-portrait" data-reveal>
+        <div class="portrait-frame glow-card">
+          <img src="assets/media/whoIam.png" alt="Portrait of Amol Jadhav" class="portrait-img">
+          <div class="portrait-ring"></div>
+        </div>
+      </div>
+      <div class="who-copy">
+        <p class="eyebrow" data-reveal>Who Am I</p>
+        <h2 class="scene-title" data-reveal>I build the systems that let engineering teams stop firefighting and start shipping.</h2>
+        <p class="body-lg" data-reveal>
+          I'm Amol — a DevOps engineer who got hooked on one idea early: the best infrastructure work is invisible.
+          When a pipeline is designed well, nobody thinks about it. It just runs, deploys, and heals itself while
+          the team gets on with building products.
+        </p>
+        <p class="body-lg" data-reveal>
+          Over seven years I've moved from writing Python ETL jobs to running enterprise Azure DevOps platforms for
+          insurance and banking clients — and along the way I picked up a second obsession: using AI, specifically
+          Azure OpenAI, to remove the last mile of manual effort that automation alone can't touch, like turning a
+          wall of pipeline logs into a release note a business stakeholder can actually read.
+        </p>
+        <p class="body-lg" data-reveal>
+          I like problems with a clear before-and-after: four hours of manual release work becoming ninety minutes,
+          fifty-three dead services becoming a smaller and cheaper estate, a deployment that used to need three people
+          becoming one self-service click. That's the kind of engineering I'm curious about, and the kind I keep
+          coming back to.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 3 — PROFESSIONAL JOURNEY ============ -->
+  <section class="scene journey" id="journey">
+    <div class="scene-inner">
+      <p class="eyebrow" data-reveal>Professional Journey</p>
+      <h2 class="scene-title" data-reveal>Seven years, one employer, three very different engineering problems.</h2>
+
+      <div class="timeline" id="timeline">
+        <div class="timeline-track"><div class="timeline-track-fill"></div></div>
+
+        <!-- Role 1 -->
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-marker"></div>
+          <div class="timeline-card glass-card glow-card">
+            <div class="timeline-head">
+              <span class="tag tag-current">Current</span>
+              <h3>Senior Azure DevOps Engineer</h3>
+              <p class="timeline-meta">Tata Consultancy Services · Client: Ageas Insurance · Eastleigh, UK · Jan 2025 – Present</p>
+            </div>
+            <div class="impact-block">
+              <p class="impact-label">In Simple Words</p>
+              <p>I run the central automation platform that ships an insurance client's core build and release process — cutting a four-hour daily manual job down to ninety minutes, and using AI to turn technical release logs into plain-English summaries for the business.</p>
+            </div>
+            <details class="tech-details">
+              <summary>Technical Details</summary>
+              <ul>
+                <li>Automated the complete EIS build lifecycle using Azure DevOps, Logic Apps and ADO Pipelines — reducing daily manual effort from 4 hours to 1.5 hours (~63% reduction) with hands-off pre-checks, approvals, regression validation and release note generation.</li>
+                <li>Architected an AI-powered release notes summarisation solution integrating Azure OpenAI into Azure Pipelines, using system and user prompt engineering against a deployed LLM to auto-generate non-technical summaries for business and audit audiences.</li>
+                <li>Designed and maintained CI/CD pipelines in Azure DevOps for automated build, test and deployment across multiple environments.</li>
+                <li>Built self-service EIS deployment automation that dynamically fetches approvers, detects deployment conflicts and orchestrates sequential deployments — with real-time MS Teams notifications and near-zero wait time.</li>
+                <li>Implemented an Azure DevOps Boards ↔ ServiceNow integration to improve ticket traceability and reduce developer overhead.</li>
+                <li>Monitored production with Dynatrace, triaged ServiceNow incidents, and performed root cause analysis on performance issues.</li>
+                <li>Investigated and resolved AKS cluster incidents — health checks, pod log analysis, deployment troubleshooting.</li>
+                <li>Led the SonarQube upgrade to the 2025 LTA version across multiple application teams.</li>
+              </ul>
+            </details>
+            <div class="chip-row">
+              <span class="chip">Azure DevOps</span><span class="chip">Logic Apps</span><span class="chip">Azure OpenAI</span><span class="chip">AKS</span><span class="chip">Dynatrace</span><span class="chip">ServiceNow</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Role 2 -->
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-marker"></div>
+          <div class="timeline-card glass-card glow-card">
+            <div class="timeline-head">
+              <h3>Senior DevOps Engineer</h3>
+              <p class="timeline-meta">Tata Consultancy Services · Client: Lloyds Banking Group PLC · London, UK · Jan 2022 – Dec 2024</p>
+            </div>
+            <div class="impact-block">
+              <p class="impact-label">In Simple Words</p>
+              <p>I worked across a central platform team supporting fifteen other teams' tooling, and found £6,500 a month in savings by shutting down infrastructure nobody was using anymore.</p>
+            </div>
+            <details class="tech-details">
+              <summary>Technical Details</summary>
+              <ul>
+                <li>Collaborated with 15 platform teams, managing enterprise DevOps tooling: Git, GitHub, Jenkins, Docker, Kubernetes, Terraform, Rancher, Nexus, Dynatrace, Vault, and U-Deploy.</li>
+                <li>Optimised cloud infrastructure by decommissioning 53 inactive services, reducing server workload by 30% and delivering £6,500/month in cost savings.</li>
+                <li>Built Linux shell scripting automation to streamline repetitive operational tasks.</li>
+                <li>Used Dynatrace to monitor platform health, analyse performance metrics, and perform incident triage and root cause analysis.</li>
+                <li>Troubleshot Kubernetes cluster issues — container logs, deployment validation, pod failure resolution.</li>
+                <li>Spearheaded a Disaster Recovery solution for Nexus3, improving platform resilience.</li>
+              </ul>
+            </details>
+            <div class="chip-row">
+              <span class="chip">Kubernetes</span><span class="chip">Terraform</span><span class="chip">Jenkins</span><span class="chip">Rancher</span><span class="chip">Vault</span><span class="chip">Dynatrace</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Role 3 -->
+        <article class="timeline-item" data-reveal>
+          <div class="timeline-marker"></div>
+          <div class="timeline-card glass-card glow-card">
+            <div class="timeline-head">
+              <h3>Python &amp; PL/SQL Developer</h3>
+              <p class="timeline-meta">Tata Consultancy Services · Client: Cigna Healthcare · Pune, India · Aug 2019 – Dec 2021</p>
+            </div>
+            <div class="impact-block">
+              <p class="impact-label">In Simple Words</p>
+              <p>My first role out of university — leading a small Scrum team to ship defect-free healthcare software, and automating a manual enrolment process with Python.</p>
+            </div>
+            <details class="tech-details">
+              <summary>Technical Details</summary>
+              <ul>
+                <li>Delivered 30 defect-free modules across 6 sprints as Scrum Team Lead, coordinating with senior architects on sprint planning.</li>
+                <li>Developed an end-to-end ETL process in Python, automating member enrolment workflows and email notifications.</li>
+                <li>Led refactoring of UC4 scheduling tool modules to SDLC standards, deploying new modules via a DevOps pipeline.</li>
+              </ul>
+            </details>
+            <div class="chip-row">
+              <span class="chip">Python</span><span class="chip">PL/SQL</span><span class="chip">ETL</span><span class="chip">Scrum</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 4 — BUSINESS IMPACT ============ -->
+  <section class="scene impact" id="impact">
+    <div class="scene-inner">
+      <p class="eyebrow" data-reveal>Business Impact</p>
+      <h2 class="scene-title" data-reveal>Engineering that shows up on a spreadsheet, not just a dashboard.</h2>
+
+      <div class="stat-grid">
+        <div class="stat-card glass-card glow-card" data-reveal>
+          <p class="stat-number" data-count="63" data-suffix="%">0%</p>
+          <p class="stat-label">Cut in daily manual release effort</p>
+          <p class="stat-detail">4 hours → 1.5 hours, via full EIS build lifecycle automation.</p>
+        </div>
+        <div class="stat-card glass-card glow-card" data-reveal>
+          <p class="stat-number" data-count="6500" data-prefix="£" data-suffix="/mo">£0</p>
+          <p class="stat-label">Infrastructure cost saved every month</p>
+          <p class="stat-detail">From decommissioning 53 inactive services.</p>
+        </div>
+        <div class="stat-card glass-card glow-card" data-reveal>
+          <p class="stat-number" data-count="30" data-suffix="%">0%</p>
+          <p class="stat-label">Server workload reduction</p>
+          <p class="stat-detail">Across a shared platform used by 15 teams.</p>
+        </div>
+        <div class="stat-card glass-card glow-card" data-reveal>
+          <p class="stat-number" data-count="15" data-suffix=" teams">0</p>
+          <p class="stat-label">Platform teams supported centrally</p>
+          <p class="stat-detail">Enterprise-scale DevOps tooling at Lloyds Banking Group.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 5 — TECHNOLOGY ECOSYSTEM ============ -->
+  <section class="scene tech" id="tech">
+    <div class="scene-inner">
+      <p class="eyebrow" data-reveal>Technology Ecosystem</p>
+      <h2 class="scene-title" data-reveal>The stack, by what it's for — not an alphabetical wall of logos.</h2>
+
+      <div class="tech-categories">
+        <div class="tech-category" data-reveal>
+          <h3>Cloud &amp; Infrastructure</h3>
+          <div class="dock" data-dock>
+            <button class="dock-icon" data-stage="deploy" data-name="Microsoft Azure" data-desc="IaaS, PaaS &amp; SaaS across Azure DevOps, AKS and Logic Apps." data-years="7 yrs"><img src="assets/icons/microsoftazure.png" alt="Microsoft Azure" loading="lazy"></button>
+            <button class="dock-icon" data-stage="deploy" data-name="AKS" data-desc="Cluster operations, incident triage and workload troubleshooting." data-years="5 yrs"><img src="https://cdn.simpleicons.org/kubernetes/4FC3F7" alt="Azure Kubernetes Service" loading="lazy"></button>
+            <button class="dock-icon" data-stage="deploy" data-name="Terraform" data-desc="Infrastructure as code for repeatable environment builds." data-years="4 yrs"><img src="https://cdn.simpleicons.org/terraform/844FBA" alt="Terraform" loading="lazy"></button>
+            <button class="dock-icon" data-stage="deploy" data-name="AWS" data-desc="Cloud Practitioner-level exposure to core AWS services." data-years="2 yrs"><img src="assets/icons/amazonaws.png" alt="AWS" loading="lazy"></button>
+            <button class="dock-icon" data-stage="deploy" data-name="Docker" data-desc="Containerising workloads for consistent deployments." data-years="5 yrs"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" loading="lazy"></button>
+            <button class="dock-icon" data-stage="deploy" data-name="Rancher" data-desc="Managing multi-cluster Kubernetes at Lloyds Banking Group." data-years="3 yrs"><img src="https://cdn.simpleicons.org/rancher/0075A8" alt="Rancher" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="tech-category" data-reveal>
+          <h3>CI/CD &amp; Delivery</h3>
+          <div class="dock" data-dock>
+            <button class="dock-icon" data-stage="plan" data-name="Jira" data-desc="Issue &amp; project tracking for planning and sprint work." data-years="6 yrs"><img src="https://cdn.simpleicons.org/jira/2E5AAC" alt="Jira" loading="lazy"></button>
+            <button class="dock-icon" data-stage="execute" data-name="Azure DevOps" data-desc="Pipelines, Boards and Repos for enterprise release automation." data-years="6 yrs"><img src="assets/icons/azuredevops.png" alt="Azure DevOps" loading="lazy"></button>
+            <button class="dock-icon" data-stage="execute" data-name="Jenkins" data-desc="Build and deployment orchestration for legacy and hybrid pipelines." data-years="4 yrs"><img src="https://cdn.simpleicons.org/jenkins/D24939" alt="Jenkins" loading="lazy"></button>
+            <button class="dock-icon" data-stage="plan" data-name="GitHub" data-desc="Source control and automation for personal and platform projects." data-years="6 yrs"><img src="https://cdn.simpleicons.org/github/FFFFFF" alt="GitHub" loading="lazy"></button>
+            <button class="dock-icon" data-stage="plan" data-name="GitLab" data-desc="Source control and CI pipelines on enterprise engagements." data-years="3 yrs"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="GitLab" loading="lazy"></button>
+            <button class="dock-icon" data-stage="plan" data-name="Git" data-desc="Branching strategy and release management." data-years="7 yrs"><img src="https://cdn.simpleicons.org/git/F05032" alt="Git" loading="lazy"></button>
+            <button class="dock-icon" data-stage="execute" data-name="Nexus" data-desc="Artifact repository management, including a Nexus3 DR solution." data-years="3 yrs"><img src="assets/icons/nexus.png" alt="Nexus" loading="lazy"></button>
+            <button class="dock-icon" data-stage="deploy" data-name="Argo CD" data-desc="GitOps continuous delivery for Kubernetes." data-years="2 yrs"><img src="assets/icons/argocd.png" alt="Argo CD" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="tech-category" data-reveal>
+          <h3>Monitoring &amp; Governance</h3>
+          <div class="dock" data-dock>
+            <button class="dock-icon" data-stage="monitor" data-name="Dynatrace" data-desc="Production observability, APM and incident root cause analysis." data-years="5 yrs"><img src="https://cdn.simpleicons.org/dynatrace/1496FF" alt="Dynatrace" loading="lazy"></button>
+            <button class="dock-icon" data-stage="monitor" data-name="SonarQube" data-desc="Code quality gates — led the 2025 LTA upgrade." data-years="4 yrs"><img src="assets/icons/sonarqube.png" alt="SonarQube" loading="lazy"></button>
+            <button class="dock-icon" data-stage="monitor" data-name="Vault" data-desc="Secrets management across pipelines and clusters." data-years="3 yrs"><img src="https://cdn.simpleicons.org/vault/FFEC6E" alt="HashiCorp Vault" loading="lazy"></button>
+            <button class="dock-icon" data-stage="monitor" data-name="ServiceNow" data-desc="Incident and work item integration with Azure DevOps Boards." data-years="3 yrs"><img src="assets/icons/servicenow.svg" alt="ServiceNow" loading="lazy"></button>
+          </div>
+        </div>
+
+        <div class="tech-category" data-reveal>
+          <h3>Programming &amp; AI</h3>
+          <div class="dock" data-dock>
+            <button class="dock-icon" data-stage="execute" data-name="Python" data-desc="ETL automation and scripting across every role since 2019." data-years="7 yrs"><img src="https://cdn.simpleicons.org/python/4FC3F7" alt="Python" loading="lazy"></button>
+            <button class="dock-icon" data-stage="execute" data-name="Linux" data-desc="Shell scripting for operational automation." data-years="7 yrs"><img src="https://cdn.simpleicons.org/linux/FFFFFF" alt="Linux" loading="lazy"></button>
+            <button class="dock-icon" data-stage="execute" data-name="YAML" data-desc="Pipeline-as-code definitions across Azure DevOps and Jenkins." data-years="6 yrs"><img src="https://cdn.simpleicons.org/yaml/CB171E" alt="YAML" loading="lazy"></button>
+            <button class="dock-icon" data-stage="cross" data-name="Azure OpenAI" data-desc="LLM integration for AI-generated release note summaries." data-years="1.5 yrs"><img src="assets/icons/openai.png" alt="Azure OpenAI" loading="lazy"></button>
+            <button class="dock-icon" data-stage="cross" data-name="ChatGPT" data-desc="Prompt engineering for day-to-day engineering workflows." data-years="2 yrs"><img src="assets/icons/openai.png" alt="ChatGPT" loading="lazy"></button>
+            <button class="dock-icon" data-stage="cross" data-name="GitHub Copilot" data-desc="AI pair-programming inside the daily development loop." data-years="2 yrs"><img src="https://cdn.simpleicons.org/githubcopilot/FFFFFF" alt="GitHub Copilot" loading="lazy"></button>
+          </div>
+        </div>
+      </div>
+      <p class="tech-hint" data-reveal>Hover or tap an icon for years of experience and how it's used day to day.</p>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 6 — AI & AUTOMATION ============ -->
+  <section class="scene ai" id="ai">
+    <div class="scene-inner ai-grid">
+      <div class="ai-copy">
+        <p class="eyebrow" data-reveal>AI &amp; Automation</p>
+        <h2 class="scene-title" data-reveal>Release notes nobody outside engineering used to read — now nobody has to translate.</h2>
+        <div class="impact-block" data-reveal>
+          <p class="impact-label">In Simple Words</p>
+          <p>Every release used to produce a wall of technical pipeline logs. I connected Azure OpenAI to the release pipeline so it reads those logs and writes a short, plain-English summary automatically — for business stakeholders and audit, with zero manual effort.</p>
+        </div>
+        <details class="tech-details" data-reveal>
+          <summary>Technical Details</summary>
+          <ul>
+            <li>Integrated Azure OpenAI into Azure Pipelines as a release-stage task.</li>
+            <li>Designed system and user prompts to constrain tone, length and audience (non-technical, business/audit-facing).</li>
+            <li>Output feeds directly into the existing EIS release workflow — no separate tool or manual step.</li>
+            <li>Applied the same prompt-engineering approach to day-to-day workflows using ChatGPT and GitHub Copilot.</li>
+          </ul>
+        </details>
+      </div>
+      <div class="ai-demo glass-card glow-card" data-reveal aria-label="Demonstration of AI-generated release note">
+        <div class="ai-demo-head">
+          <span class="ai-dot"></span>
+          <span>Azure OpenAI · Release Summary</span>
+        </div>
+        <div class="ai-demo-body">
+          <div class="ai-bubble ai-bubble-in" id="ai-prompt">
+            <span class="ai-bubble-label">Pipeline log excerpt</span>
+            <span class="ai-bubble-text" id="ai-prompt-text"></span>
+          </div>
+          <div class="ai-thinking" id="ai-thinking" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="ai-bubble ai-bubble-out" id="ai-response" hidden>
+            <span class="ai-bubble-label">Generated summary</span>
+            <span class="ai-bubble-text" id="ai-response-text"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 7 — TRAINING & CERTIFICATIONS ============ -->
+  <section class="scene training" id="certifications">
+    <div class="scene-inner">
+      <p class="eyebrow" data-reveal>Training &amp; Certifications</p>
+      <h2 class="scene-title" data-reveal>Continuous learning, reinforced by both hands-on training and formal credentials.</h2>
+
+      <div class="cred-section-block" data-reveal>
+        <h3 class="cred-subtitle">Training</h3>
+        <div class="cred-grid">
+          <div class="cred-card" tabindex="0">
+            <div class="cred-card-inner">
+              <div class="cred-face cred-front">
+                <div class="cred-badge">DEV</div>
+                <h3>DevOps Engineer Training</h3>
+                <p>Edureka</p>
+                <span class="status-chip status-active">Completed</span>
+              </div>
+              <div class="cred-face cred-back">
+                <h3>DevOps Engineer Training</h3>
+                <p>Structured training covering CI/CD design, infrastructure automation, and release engineering.</p>
+                <span class="status-chip status-active">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="cred-card" tabindex="0">
+            <div class="cred-card-inner">
+              <div class="cred-face cred-front">
+                <div class="cred-badge">K8S</div>
+                <h3>Kubernetes Administrator (CKAD)</h3>
+                <p>Edureka</p>
+                <span class="status-chip status-active">Completed</span>
+              </div>
+              <div class="cred-face cred-back">
+                <h3>Kubernetes Administrator (CKAD)</h3>
+                <p>Application-focused Kubernetes training covering deployments, scaling, and troubleshooting.</p>
+                <span class="status-chip status-active">Completed</span>
+              </div>
+            </div>
+          </div>
+          <div class="cred-card" tabindex="0">
+            <div class="cred-card-inner">
+              <div class="cred-face cred-front">
+                <div class="cred-badge">ENG</div>
+                <h3>Bachelor of Engineering</h3>
+                <p>Amravati University</p>
+                <span class="status-chip status-active">Graduated</span>
+              </div>
+              <div class="cred-face cred-back">
+                <h3>Bachelor of Engineering</h3>
+                <p>Foundational engineering degree completed from 2015 to 2019.</p>
+                <span class="status-chip status-active">Graduated</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cred-section-block" data-reveal>
+        <h3 class="cred-subtitle">Certifications</h3>
+        <div class="cred-grid">
+          <div class="cred-card" tabindex="0">
+            <div class="cred-card-inner">
+              <div class="cred-face cred-front">
+                <img class="cert-badge" src="assets/icons/AZ900badge.png" alt="AZ-900 badge">
+                <h3>Microsoft AZ-900</h3>
+                <p>Microsoft</p>
+                <span class="status-chip status-active">Active</span>
+              </div>
+              <div class="cred-face cred-back">
+                <h3>Microsoft AZ-900</h3>
+                <p>Foundational knowledge of Azure cloud concepts, services, security, and pricing.</p>
+                <span class="status-chip status-active">Current status: Active</span>
+              </div>
+            </div>
+          </div>
+          <div class="cred-card" tabindex="0">
+            <div class="cred-card-inner">
+              <div class="cred-face cred-front">
+                <img class="cert-badge" src="assets/icons/AZ104Badge.png" alt="AZ-104 badge">
+                <h3>Microsoft AZ-104</h3>
+                <p>Microsoft</p>
+                <span class="status-chip status-pending">Renewal Needed</span>
+              </div>
+              <div class="cred-face cred-back">
+                <h3>Microsoft AZ-104</h3>
+                <p>Practical Azure administration skills for identity, networking, governance, and compute.</p>
+                <span class="status-chip status-pending">Current status: Renewal Needed</span>
+              </div>
+            </div>
+          </div>
+          <div class="cred-card" tabindex="0">
+            <div class="cred-card-inner">
+              <div class="cred-face cred-front">
+                <img class="cert-badge" src="assets/icons/AZ400Badge.png" alt="AZ-400 badge">
+                <h3>Microsoft AZ-400</h3>
+                <p>Microsoft</p>
+                <span class="status-chip status-pending">Renewal Needed</span>
+              </div>
+              <div class="cred-face cred-back">
+                <h3>Microsoft AZ-400</h3>
+                <p>DevOps engineering expertise across CI/CD, automation, and delivery practices.</p>
+                <span class="status-chip status-pending">Current status: Renewal Needed</span>
+              </div>
+            </div>
+          </div>
+          <div class="cred-card" tabindex="0">
+            <div class="cred-card-inner">
+              <div class="cred-face cred-front">
+                <img class="cert-badge" src="assets/icons/AWS-CLF02.png" alt="AWS Certified Cloud Practitioner badge">
+                <h3>AWS Certified Cloud Practitioner</h3>
+                <p>AWS</p>
+                <span class="status-chip status-active">Active</span>
+              </div>
+              <div class="cred-face cred-back">
+                <h3>AWS Certified Cloud Practitioner</h3>
+                <p>Broad cloud fundamentals with an emphasis on AWS core services and adoption concepts.</p>
+                <span class="status-chip status-active">Current status: Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 8 — ABOUT ME ============ -->
+  <section class="scene about" id="about">
+    <div class="scene-inner who-grid reverse">
+      <div class="about-copy">
+        <p class="eyebrow" data-reveal>About Me</p>
+        <h2 class="scene-title" data-reveal>How I actually work.</h2>
+        <p class="body-lg" data-reveal>
+          I default to automating anything I do twice. If a task is manual, repeatable and boring, I treat that as
+          an open bug — not a fact of life. That mindset is behind most of the numbers on this page.
+        </p>
+        <div class="value-cards">
+          <div class="value-card glass-card glow-card" data-reveal>
+            <h4>Engineering Philosophy</h4>
+            <p>Good infrastructure is boring infrastructure — reliable enough that nobody has to think about it.</p>
+          </div>
+          <div class="value-card glass-card glow-card" data-reveal>
+            <h4>Continuous Learning</h4>
+            <p>Currently deepening my Kubernetes and Azure OpenAI practice, alongside my CKAD training.</p>
+          </div>
+          <div class="value-card glass-card glow-card" data-reveal>
+            <h4>Working Style</h4>
+            <p>Direct, calm under production incidents, and biased toward root cause over quick patches.</p>
+          </div>
+          <div class="value-card glass-card glow-card" data-reveal>
+            <h4>Beyond Work</h4>
+            <p>Structured early mornings, disciplined training, and a genuine interest in how far AI can push DevOps next.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-portrait" data-reveal>
+        <div class="portrait-frame glow-card">
+          <img src="assets/media/aboutme.png" alt="About Amol Jadhav" class="portrait-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCENE 9 — CONTACT ============ -->
+  <section class="scene contact" id="contact">
+    <div class="scene-inner">
+      <p class="eyebrow" data-reveal>Contact</p>
+      <h2 class="scene-title" data-reveal>Let's talk about your platform.</h2>
+      <p class="body-lg" data-reveal>Whether it's a pipeline that needs to trust itself more, or a workflow that's ready for AI — I'm always happy to talk shop.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card glass-card glow-card" data-reveal>
+          <span class="contact-label">Email</span>
+          <div class="contact-row">
+            <a href="mailto:amolsjadhav6213@gmail.com">amolsjadhav6213@gmail.com</a>
+            <button class="copy-btn" id="copy-email" aria-label="Copy email address">Copy</button>
+          </div>
+        </div>
+        <div class="contact-card glass-card glow-card" data-reveal>
+          <span class="contact-label">Mobile</span>
+          <div class="contact-row">
+            <a href="tel:+447586199755">+44 7586 199755</a>
+          </div>
+        </div>
+        <div class="contact-card glass-card glow-card" data-reveal>
+          <span class="contact-label">LinkedIn</span>
+          <a href="https://linkedin.com/in/amol-s-jadhav" target="_blank" rel="noopener">linkedin.com/in/amol-s-jadhav</a>
+        </div>
+        <div class="contact-card glass-card glow-card" data-reveal>
+          <span class="contact-label">GitHub</span>
+          <a href="https://github.com/AmolJadhav97" target="_blank" rel="noopener">github.com/AmolJadhav97</a>
+        </div>
+        <div class="contact-card glass-card glow-card" data-reveal>
+          <span class="contact-label">Location</span>
+          <span>Eastleigh, United Kingdom</span>
+        </div>
+      </div>
+
+      <a href="Amol_Jadhav_DevOps.pdf" class="btn btn-primary" download data-reveal>Download Résumé</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Amol Jadhav. Built with HTML, CSS &amp; JavaScript.</p>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/amol-s-jadhav" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="https://cdn.simpleicons.org/linkedin/8EA7C3" alt="" width="18" height="18"></a>
+      <a href="https://github.com/AmolJadhav97" target="_blank" rel="noopener" aria-label="GitHub"><img src="https://cdn.simpleicons.org/github/8EA7C3" alt="" width="18" height="18"></a>
+      <a href="mailto:amolsjadhav6213@gmail.com" aria-label="Email"><img src="https://cdn.simpleicons.org/gmail/8EA7C3" alt="" width="18" height="18"></a>
+    </div>
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+  </footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
