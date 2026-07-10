@@ -1,713 +1,138 @@
-# MASTER USER PROMPT
-# Version 3.0 – Premium Interactive Personal Brand Website
+# PART 2 - MASTER USER PROMPT
+# Version 4.0 - Exact Content Blueprint
+
+SOURCE OF TRUTH
+Use approved latest website content and verified resume facts only.
+Do not add claims that cannot be verified.
+
+WEBSITE TYPE
+Premium interactive personal brand website for Amol Jadhav.
+Not a template portfolio.
+
+NAVIGATION
+Top nav items:
+- Home
+- Journey
+- About Me
+- Contact
+
+SCENE ORDER
+1. Hero
+2. Who Am I
+3. Professional Journey
+4. Business Impact
+5. Technology Ecosystem
+6. AI and Automation
+7. Training and Certifications
+8. About Me
+9. Contact
+
+HERO - EXACT POSITIONING
+- Eyebrow text: Senior DevOps Engineer - AI and Automation Specialist
+- Primary name: Amol Jadhav
+- Primary CTA: Explore My Journey
+- Secondary CTA: Download Resume
+
+WHO AM I - EXACT HEADLINE
+I simplify complexity through automation, cloud engineering, and thoughtful design.
+
+WHO AM I - FIRST PARAGRAPH (EXACT)
+I'm Amol - a DevOps engineer who got hooked on one idea early: software delivery should be effortless. I enjoy building CI/CD pipelines and automation that take the complexity out of building, testing and deploying applications. When the right automation is in place, releases become faster, more reliable, and teams can focus on creating great products instead of managing repetitive deployment tasks.
+
+PROFESSIONAL JOURNEY - EXACT HEADING
+One employer, Three enterprise clients and Seven years of continuous growth.
+
+PROFESSIONAL JOURNEY - ROLES
+Role 1
+- Title: Senior DevOps Engineer
+- Employer: Tata Consultancy Services
+- Client: Ageas Insurance
+- Location: Eastleigh, UK
+- Duration: Jan 2025 - Present
+
+Role 2
+- Title: Senior DevOps Engineer
+- Employer: Tata Consultancy Services
+- Client: Lloyds Banking Group PLC
+- Location: London, UK
+- Duration: Jan 2022 - Dec 2024
+
+Role 3
+- Title: Python and PL/SQL Developer
+- Employer: Tata Consultancy Services
+- Client: Cigna Healthcare
+- Location: Pune, India
+- Duration: Aug 2019 - Dec 2021
+
+PROFESSIONAL JOURNEY - AGEAS CHIPS (EXACT LIST)
+- Azure DevOps (ADO)
+- Jenkins
+- GitHub
+- GitLab
+- Git
+- Nexus
+- CD CD
+- SonarQube
+- ServiceNow Integration
+- Docker
+- Kubernetes
+- Linux Shell Scripting
+- Azure OpenAI
+- LLM Integration
+- Prompt Engineering
+- Azure Logic Apps
+- Generative AI
+
+PROFESSIONAL JOURNEY - LLOYDS CHIPS (EXACT LIST)
+- CD CD
+- Jenkins
+- GitHub
+- Git
+- Nexus
+- SonarQube
+- ServiceNow Integration
+- Docker
+- Kubernetes
+- Linux Shell Scripting
+
+BUSINESS IMPACT - EXACT HEADING
+Real impact, measured in time saved, costs reduced, and teams empowered.
+
+AI AND AUTOMATION - EXACT HEADING
+Bridging Engineering and Business with AI
 
-The attached resume is the ONLY source of truth for all professional experience, employment dates, projects, and measurable achievements.
+AI AND AUTOMATION - IN SIMPLE WORDS (EXACT)
+I designed and implemented an LLM-powered release intelligence solution using Azure OpenAI. By combining Azure DevOps automation, API-driven data extraction, and prompt engineering, the system converts technical release information into structured, business-friendly summaries that improve communication across engineering, business, and audit teams.
 
-Never invent employers, projects, certifications, or achievements that are not supported by the resume.
+AI DEMO - EXACT INPUT EXAMPLE
+Work Item #45231:
+Title: Update token expiry handling
+Description: Modify authentication service logic to refresh expired tokens automatically.
 
-You may rewrite the wording to improve readability and storytelling, but never fabricate facts.
+Work Item #45245:
+Title: Improve deployment validation
+Description: Add additional checks to reduce failed deployment scenarios.
 
-========================================================
-PROJECT OBJECTIVE
-========================================================
+AI DEMO - EXACT GENERATED RELEASE NOTES
+This release improves application security and deployment reliability by enhancing authentication token handling and introducing additional validation checks. These updates reduce user disruption caused by session expiry issues and improve release stability.
 
-Create a world-class personal brand website that immediately communicates professionalism, enterprise engineering expertise, and business impact.
+ABOUT ME - HOW I WORK CARDS (EXACT BODY COPY)
+Engineering Philosophy:
+If a deployment needs me personally to click "approve," that's a design flaw, not job security. I build self-service systems - like automated approver routing - so teams don't have to wait on one person to move forward.
 
-This is not a resume.
+Continuous Learning:
+Azure has been home for seven years, so I'm deliberately building outside it - hands-on AWS, deeper Kubernetes trainings, plus ongoing applied AI practice with more in depth learning.
 
-This is not a portfolio template.
+Working Style:
+I treat incidents as mine to own until resolved - staying calm, communicating clearly, and pushing past the quick patch to find what actually broke.
 
-This is a premium interactive website designed to leave a lasting impression on recruiters, hiring managers, engineering leaders, CTOs, and HR professionals.
+RESUME CTA TEXT RULE
+Use "Download Resume" (ASCII text only).
+Avoid accented characters in this CTA.
 
-The website should feel like an award-winning digital experience rather than a collection of sections.
+FOOTER LINKEDIN RULE
+Use a reliable visible LinkedIn icon source.
+Preferred: local asset path under assets/icons for stable rendering.
 
-The first impression should happen within 10 seconds.
-
-Within 30 seconds the visitor should understand:
-
-• Who Amol Jadhav is.
-• Why he is valuable.
-• What business problems he solves.
-• Why he stands out from other DevOps Engineers.
-• Why he deserves an interview.
-
-========================================================
-PRIMARY AUDIENCE
-========================================================
-
-The website must work equally well for:
-
-• HR Recruiters
-• Talent Acquisition Teams
-• Hiring Managers
-• Engineering Managers
-• Cloud Architects
-• Technical Interviewers
-• CTOs
-• Directors
-
-This means every technical achievement must first be explained in simple business language.
-
-For every major technical section create:
-
-"In Simple Words"
-
-followed by
-
-"Technical Details"
-
-inside a collapsible section.
-
-The business explanation should answer:
-
-"What value did this create?"
-
-The technical explanation should answer:
-
-"How was it built?"
-
-========================================================
-GENERAL DESIGN DIRECTION
-========================================================
-
-Overall Style
-
-Premium
-
-Modern
-
-Elegant
-
-Professional
-
-Enterprise
-
-Minimal
-
-Confident
-
-Sophisticated
-
-Never childish.
-
-Never hacker-themed.
-
-Never gaming-inspired.
-
-Never overload the visitor.
-
-The website should feel like something Microsoft itself would publish.
-
-========================================================
-WEBSITE STRUCTURE
-========================================================
-
-Top Navigation
-
-Top Left
-
-AMOL JADHAV
-
-Clicking the name should always navigate back to the Home page.
-
-Top Right Navigation
-
-Home
-
-Journey
-
-About Me
-
-Contact
-
-Navigation should remain fixed while scrolling.
-
-Background should become slightly blurred after scrolling.
-
-Smooth underline animation.
-
-Elegant hover effects.
-
-========================================================
-HOME PAGE
-========================================================
-
-Hero Section
-
-Do NOT use a normal hero section.
-
-Create a premium landing experience.
-
-Background
-
-Animated gradient
-
-Soft floating particles
-
-Moving cloud-inspired lighting
-
-Subtle network lines
-
-Mouse parallax
-
-Glass effects
-
-Soft glow
-
-Headline
-
-AMOL JADHAV
-
-Animated reveal.
-
-Subtitle
-
-Senior Azure DevOps Engineer
-
-AI & Automation Specialist
-
-Then rotating text
-
-Building Enterprise Cloud Platforms
-
-Automating Complex Workflows
-
-Engineering Reliable CI/CD Systems
-
-Transforming Manual Processes into Intelligent Automation
-
-Creating AI-Powered DevOps Solutions
-
-Each sentence should fade beautifully.
-
-Primary CTA
-
-Explore My Journey
-
-Secondary CTA
-
-Download Resume
-
-The scroll indicator should gently animate.
-
-========================================================
-PAGE FLOW
-========================================================
-
-This website is not divided into sections.
-
-It is divided into scenes.
-
-Scene 1
-
-Introduction
-
-↓
-
-Scene 2
-
-Who Am I
-
-↓
-
-Scene 3
-
-Professional Journey
-
-↓
-
-Scene 4
-
-Business Impact
-
-↓
-
-Scene 5
-
-Engineering Excellence
-
-↓
-
-Scene 6
-
-Technology Ecosystem
-
-↓
-
-Scene 7
-
-AI & Automation
-
-↓
-
-Scene 8
-
-Certifications
-
-↓
-
-Scene 9
-
-About Me
-
-↓
-
-Scene 10
-
-Contact
-
-Each scene should transition naturally into the next.
-
-========================================================
-WHO AM I
-========================================================
-
-Large portrait.
-
-Professional introduction.
-
-Do not simply rewrite the resume.
-
-Create a compelling personal introduction explaining:
-
-Who I am.
-
-Why I enjoy engineering.
-
-My passion for automation.
-
-Interest in cloud technologies.
-
-Love for simplifying complex processes.
-
-Passion for continuous learning.
-
-Curiosity about AI.
-
-My engineering philosophy.
-
-Keep the tone warm and approachable.
-
-========================================================
-PROFESSIONAL JOURNEY
-========================================================
-
-Reverse chronological order.
-
-Latest experience first.
-
-Oldest experience last.
-
-Each company becomes a timeline milestone.
-
-Timeline grows while scrolling.
-
-Every milestone contains
-
-Company
-
-Role
-
-Location
-
-Duration
-
-Summary
-
-Business Impact
-
-Technical Details (expandable)
-
-Achievements
-
-Never overwhelm HR with jargon.
-
-========================================================
-BUSINESS IMPACT
-========================================================
-
-Create an entirely new section before Skills.
-
-Large animated statistics.
-
-Examples
-
-63% Reduction
-
-Manual effort eliminated
-
-£6,500/month
-
-Infrastructure savings
-
-30%
-
-Server reduction
-
-Enterprise
-
-Multi-team collaboration
-
-Numbers animate upward.
-
-Use premium typography.
-
-========================================================
-TECHNOLOGY ECOSYSTEM
-========================================================
-
-Do NOT list skills as plain text.
-
-Every skill should use its official SVG icon.
-
-Examples
-
-Azure
-
-Azure DevOps
-
-Azure OpenAI
-
-Azure Logic Apps
-
-AKS
-
-AWS
-
-Amazon S3
-
-Amazon EKS
-
-Terraform
-
-Docker
-
-Kubernetes
-
-GitHub
-
-Git
-
-GitLab
-
-Jenkins
-
-Linux
-
-Python
-
-YAML
-
-Vault
-
-Dynatrace
-
-SonarQube
-
-Rancher
-
-Nexus
-
-ServiceNow
-
-ChatGPT
-
-Copilot
-
-Hover Behaviour
-
-Glow
-
-Scale
-
-Smooth lift
-
-Tooltip
-
-Years of experience
-
-Brief explanation
-
-Related technologies
-
-The interaction should feel inspired by the macOS Dock.
-
-========================================================
-AI & AUTOMATION
-========================================================
-
-This section should become the visual highlight.
-
-Create an AI assistant interface.
-
-Animated prompt.
-
-Prompt enters.
-
-Azure OpenAI processes it.
-
-Response generated.
-
-Explain:
-
-How AI was integrated into DevOps.
-
-Release note generation.
-
-Automation.
-
-Prompt Engineering.
-
-Business value.
-
-Technical Details hidden inside expandable cards.
-
-========================================================
-CLOUD PLATFORM VISUALISATION
-========================================================
-
-Illustrate cloud architecture.
-
-Animated Azure resources.
-
-AKS clusters.
-
-Storage.
-
-Logic Apps.
-
-Terraform deployment.
-
-CI/CD pipeline.
-
-Everything connected using elegant animated lines.
-
-========================================================
-CERTIFICATIONS
-========================================================
-
-Display official certification badges.
-
-Never use plain text.
-
-Include subtle status labels.
-
-Required Certifications
-
-Microsoft AZ-900
-
-Status
-
-Active
-
-Microsoft AZ-104
-
-Status
-
-Renewal Needed
-
-Microsoft AZ-400
-
-Status
-
-Renewal Needed
-
-AWS Certified Cloud Practitioner CLF-C02
-
-Status
-
-Active
-
-Status should be small.
-
-Elegant.
-
-Never distracting.
-
-Hover should flip the card.
-
-Back side contains
-
-Certification
-
-Short description
-
-Current status
-
-========================================================
-ABOUT ME PAGE
-========================================================
-
-Dedicated page.
-
-Professional portrait.
-
-Create engaging content describing
-
-My personality.
-
-Working style.
-
-Engineering mindset.
-
-Passion for DevOps.
-
-Interest in AI.
-
-Cloud technologies.
-
-Learning mindset.
-
-Favourite technologies.
-
-Professional values.
-
-Include beautifully designed information cards.
-
-========================================================
-CONTACT PAGE
-========================================================
-
-Professional contact page.
-
-Email
-
-LinkedIn
-
-GitHub
-
-Location
-
-Resume Download
-
-Copy Email button.
-
-Animated send message section.
-
-Elegant call-to-action.
-
-Include a closing statement encouraging visitors to connect.
-
-Do NOT mention notice period, availability, or job-seeking status.
-
-The website should simply present me professionally.
-
-========================================================
-TRANSITIONS
-========================================================
-
-The website must feel cinematic.
-
-Scrolling should feel like travelling through a story.
-
-Use:
-
-Fade transitions
-
-Slide transitions
-
-Depth
-
-Parallax
-
-Scale
-
-Blur
-
-Glass morphing
-
-Smooth page transitions
-
-Animated scene reveals
-
-Soft motion
-
-No abrupt changes.
-
-Every transition should be intentional.
-
-========================================================
-ACCESSIBILITY
-========================================================
-
-Keyboard navigation.
-
-Visible focus indicators.
-
-ARIA labels.
-
-Semantic HTML.
-
-Good contrast.
-
-Readable typography.
-
-Responsive on
-
-Desktop
-
-Tablet
-
-Mobile
-
-========================================================
-PERFORMANCE
-========================================================
-
-Optimise images.
-
-Lazy load where appropriate.
-
-Avoid unnecessary JavaScript.
-
-Maintain smooth 60fps animations.
-
-Fast loading.
-
-========================================================
-S3 COMPATIBILITY
-========================================================
-
-Generate only
-
-index.html
-
-style.css
-
-script.js
-
-Use relative paths.
-
-No build tools.
-
-No framework.
-
-Everything must work immediately when uploaded to an AWS S3 static website bucket.
-
-========================================================
-CONTENT RULES
-========================================================
-
-Never use Lorem Ipsum.
-
-Never create placeholder projects.
-
-Never invent technologies.
-
-Never invent achievements.
-
-Everything must originate from the attached resume except the personal storytelling sections, which should be written professionally based on the candidate profile.
-
-========================================================
-FINAL INSTRUCTION
-
-Before generating the website, stop and imagine you are presenting this work to:
-
-• A Microsoft Design Review
-• A Senior Engineering Director
-• A Technical Recruiter
-• An HR Manager
-
-If any part resembles a generic portfolio template, redesign it until it feels premium, memorable, and uniquely crafted for Amol Jadhav.
-
-The finished result should make visitors remember the name "Amol Jadhav" long after they leave the website.
+DELIVERY REQUIREMENT
+Future generated site must match this content and hierarchy exactly unless user explicitly requests changes.

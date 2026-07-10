@@ -184,8 +184,8 @@
   const aiResponse = document.getElementById('ai-response');
   const aiResponseText = document.getElementById('ai-response-text');
 
-  const PROMPT_LOG = '[14:02:11] Stage "EIS-Release" completed. 3 pre-checks passed, 1 regression warning (non-blocking), deployment sequence: DEV → SIT → UAT. Approvals: 2/2. Duration: 6m42s.';
-  const RESPONSE_TEXT = 'Today\u2019s EIS release deployed successfully through all environments with both required approvals in place. One minor, non-blocking regression warning was flagged for review \u2014 no action required before go-live.';
+  const PROMPT_LOG = 'Work Item #45231:\nTitle: Update token expiry handling\nDescription: Modify authentication service logic to refresh expired tokens automatically.\n\nWork Item #45245:\nTitle: Improve deployment validation\nDescription: Add additional checks to reduce failed deployment scenarios.';
+  const RESPONSE_TEXT = 'This release improves application security and deployment reliability by enhancing authentication token handling and introducing additional validation checks. These updates reduce user disruption caused by session expiry issues and improve release stability.';
 
   let aiPlayed = false;
   function typeInto(el, text, speed, done) {
@@ -251,70 +251,6 @@
     });
   }
 
-  /* ============ AMBIENT PARTICLE CANVAS ============ */
-  const canvas = document.getElementById('bg-canvas');
-  if (canvas && !reduceMotion) {
-    const ctx = canvas.getContext('2d');
-    let w, h, particles;
-    const DENSITY = 14000; // px^2 per particle
-
-    function resize() {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-      const count = Math.min(90, Math.floor((w * h) / DENSITY));
-      particles = Array.from({ length: count }, () => ({
-        x: Math.random() * w,
-        y: Math.random() * h,
-        r: Math.random() * 1.6 + 0.4,
-        vx: (Math.random() - 0.5) * 0.15,
-        vy: (Math.random() - 0.5) * 0.15,
-      }));
-    }
-
-    let mouseX = -9999, mouseY = -9999;
-    window.addEventListener('mousemove', (e) => { mouseX = e.clientX; mouseY = e.clientY; });
-
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      ctx.fillStyle = 'rgba(79,195,247,0.55)';
-
-      particles.forEach(p => {
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0) p.x = w; if (p.x > w) p.x = 0;
-        if (p.y < 0) p.y = h; if (p.y > h) p.y = 0;
-
-        const dx = p.x - mouseX, dy = p.y - mouseY;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        const boost = dist < 140 ? (140 - dist) / 140 : 0;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r + boost * 1.2, 0, Math.PI * 2);
-        ctx.fill();
-      });
-
-      // subtle connecting lines
-      ctx.strokeStyle = 'rgba(79,195,247,0.08)';
-      ctx.lineWidth = 1;
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const a = particles[i], b = particles[j];
-          const dx = a.x - b.x, dy = a.y - b.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 110) {
-            ctx.beginPath();
-            ctx.moveTo(a.x, a.y);
-            ctx.lineTo(b.x, b.y);
-            ctx.stroke();
-          }
-        }
-      }
-      requestAnimationFrame(draw);
-    }
-
-    resize();
-    window.addEventListener('resize', resize);
-    requestAnimationFrame(draw);
-  }
 
   /* ============ GLOW-CARD CURSOR TRACKING ============ */
   if (!reduceMotion) {
@@ -331,79 +267,6 @@
     });
   }
 
-  /* ============ INFINITY TRAVELING GLOW ============ */
-  (function setupInfinityGlow(){
-    const wrap = document.querySelector('.infinity-wrap');
-    if (!wrap) return;
-    // Respect reduced motion
-    if (reduceMotion) return;
-    if (typeof gsap === 'undefined') return;
-
-    let glow = wrap.querySelector('.inf-travel-glow');
-    if (!glow){
-      glow = document.createElement('div');
-      glow.className = 'inf-travel-glow';
-      wrap.insertBefore(glow, wrap.firstChild);
-    }
-
-    const getIcons = () => Array.from(wrap.querySelectorAll('.inf-icon'));
-    let points = [];
-
-    function computePoints(){
-      const rect = wrap.getBoundingClientRect();
-      points = getIcons().map(ic => {
-        const r = ic.getBoundingClientRect();
-        return { x: (r.left - rect.left) + (r.width/2), y: (r.top - rect.top) + (r.height/2) };
-      });
-    }
-
-    function setGlowSize(){
-      const icons = getIcons();
-      if (!icons.length) return;
-      const r = icons[0].getBoundingClientRect();
-      const size = Math.max(160, r.width * 2.8);
-      glow.style.width = size + 'px';
-      glow.style.height = size + 'px';
-    }
-
-    computePoints(); setGlowSize();
-
-    let tl;
-    function popIcon(idx){
-      const icons = getIcons();
-      const icon = icons[idx];
-      if (!icon) return;
-      gsap.killTweensOf(icon);
-      const tlp = gsap.timeline();
-      tlp.to(icon, { duration: 0.16, scale: 1.14, ease: 'power2.out' });
-      tlp.to(icon, { duration: 0.28, scale: 1, ease: 'power2.in' });
-    }
-
-    function start(){
-      if (!points.length) return;
-      if (tl) tl.kill();
-      tl = gsap.timeline({ repeat: -1, defaults: { ease: 'power1.inOut' } });
-      const total = 10; // full loop seconds (user requested)
-      const step = total / Math.max(1, points.length);
-      gsap.set(glow, { x: points[0].x, y: points[0].y, opacity:1, transformOrigin:'50% 50%' });
-      // animate through points and trigger pop at each arrival
-      for (let i=1;i<points.length;i++){
-        const idx = i;
-        tl.to(glow, { duration: step, x: points[i].x, y: points[i].y, onStart: () => popIcon(idx) }, '>' );
-      }
-      // return to start and pop
-      tl.to(glow, { duration: step, x: points[0].x, y: points[0].y, onStart: () => popIcon(0) }, '>' );
-    }
-
-    start();
-
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => { computePoints(); setGlowSize(); start(); }, 120);
-    });
-  })();
-
   /* ============ INFINITY ICON MOTION ============ */
   (function setupInfinityIconMotion(){
     const wrap = document.querySelector('.infinity-wrap');
@@ -417,7 +280,7 @@
     let currentOrder = classOrder.slice();
 
     function rotateClasses() {
-      currentOrder.unshift(currentOrder.pop());
+      currentOrder.push(currentOrder.shift());
       icons.forEach((icon, index) => {
         icon.className = `inf-icon ${currentOrder[index]}`;
       });
