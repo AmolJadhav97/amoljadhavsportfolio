@@ -30,7 +30,7 @@ This repo is a static portfolio site focused on visual storytelling and showcasi
 Key features
 
 - Hero section with an animated infinity loop of tech icons (CSS + JS, optional GSAP)
-- Animated "traveling glow" and icon motion
+- Clockwise infinity icon motion (no traveling glow path)
 - Technology dock (interactive icons + tooltips)
 - Downloadable résumé and local media assets in `assets/media`
 - Lightweight animations (respects `prefers-reduced-motion`)
@@ -63,20 +63,18 @@ Static-only design means the site requires no server-side runtime and is ideal f
 
 ## How the infinity loop works
 
-High-level: the infinity loop is purely front-end. Icons are positioned around a decorative infinity SVG using fixed CSS coordinates. A glow element travels between icon center points (calculated from DOM), and a separate mechanism rotates icons visually along the loop.
+High-level: the infinity loop is purely front-end. Icons are positioned around a decorative infinity SVG using fixed CSS coordinates. JavaScript rotates icon position classes continuously so the loop moves clockwise.
 
 Flow (simplified):
 
 ```mermaid
 flowchart LR
-  A[index.html: .infinity-wrap] --> B[CSS: .icon-1 .. .icon-22 positions]
-  B --> C[script.js: compute icon centers]
-  C --> D[Glow animation (GSAP timeline) -> travels between centers]
-  C --> E[Icon motion (class rotation + CSS transitions) -> continuous movement]
+  A["index.html infinity-wrap"] --> B["CSS icon-1 to icon-22 positions"]
+  B --> C["script.js clockwise class rotation"]
+  C --> D["CSS transitions animate movement"]
 ```
 
 Notes:
-- The glow relies on runtime measurements of icon bounding boxes; the animation recomputes on resize.
 - Icon motion uses class-based rotation: the script rotates which `.icon-N` positioning class sits on each `<img>` element and CSS transitions smoothly animate top/left.
 - The code respects `prefers-reduced-motion` and falls back to non-animated/limited motion when browsers request reduced motion.
 
@@ -176,7 +174,10 @@ For CloudFront + OAC, follow the AWS Console flow or use AWS CDK/Terraform. If y
   - `aboutme.png` → `assets/media/aboutme.png`
   - `Amol_Jadhav_DevOps.pdf` → `assets/media/Amol_Jadhav_DevOps.pdf`
 - Removed several unused SVG asset files from `assets/icons/` to keep the repo tidy.
-- Implemented continuous icon motion and improvements in `script.js` and added CSS transition tuning in `style.css`.
+- Implemented clockwise infinity icon motion in `script.js` and tuned CSS transitions in `style.css`.
+- Removed infinity traveling glow path from HTML/CSS/JS.
+- Updated content copy and section headings to the latest approved wording.
+- Added a local footer LinkedIn icon asset for reliable rendering: `assets/icons/linkedin.svg`.
 
 ---
 
@@ -193,11 +194,11 @@ Architecture (hosting) — S3 + CloudFront
 
 ```mermaid
 flowchart LR
-  A[User Browser] -->|HTTPS| C[CloudFront CDN]
-  C -->|OAC| B[S3 Bucket (private)]
-  C --> D[Optional: Lambda@Edge or Origin Lambda]
+  A["User Browser"] -->|HTTPS| C["CloudFront CDN"]
+  C -->|OAC| B["S3 Bucket private"]
+  C --> D["Optional Lambda at Edge"]
   subgraph Optional
-    E[Backend API / Serverless] --> F[3rd-party APIs]
+    E["Backend API or Serverless"] --> F["Third party APIs"]
   end
 ```
 
@@ -205,12 +206,11 @@ Infinity loop component flow
 
 ```mermaid
 flowchart LR
-  HTML(index.html) --> CSS(style.css)
-  HTML --> JS(script.js)
-  CSS --> POSITIONS[Static .icon-N coords]
-  JS --> MEASURE[measure icon centers]
-  MEASURE --> GLOW[GSAP glow timeline]
-  POSITIONS --> ICON_MOTION[class rotate + CSS transition]
+  HTML["index.html"] --> CSS["style.css"]
+  HTML --> JS["script.js"]
+  CSS --> POSITIONS["Static icon coordinate classes"]
+  JS --> ROTATE["Rotate icon classes clockwise"]
+  ROTATE --> ICON_MOTION["CSS transitions for smooth motion"]
 ```
 
 ---
@@ -220,17 +220,3 @@ flowchart LR
 - Fork the repo, make a feature branch, and open a pull request.
 - Keep changes small and focused; update `README.md` when altering structure or deployment steps.
 
----
-
-## Contact
-
-If you want, I can:
-
-- Add a GitHub Actions workflow to automatically deploy to S3/CloudFront on push to `main`.
-- Create a simple Terraform or CDK snippet to provision S3 + CloudFront.
-
-Tell me which one you'd like and I will prepare it.
-
----
-
-License: MIT
