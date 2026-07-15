@@ -1,0 +1,21 @@
+{
+  "name": "Amol Jadhav Portfolio",
+  "short_name": "Amol Portfolio",
+  "description": "Senior DevOps Engineer and AI Automation Specialist portfolio website.",
+  "icons": [
+    {
+      "src": "assets/icons/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#07111f",
+  "background_color": "#07111f",
+  "display": "standalone",
+  "start_url": "/"
+}

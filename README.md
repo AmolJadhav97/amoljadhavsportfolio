@@ -103,67 +103,58 @@ Make edits to `index.html`, `style.css`, or `script.js`, then refresh the browse
 
 ---
 
-## Deployment to AWS S3 + optional CloudFront (recommended)
+## Deployment architecture
 
-This site is fully static and suitable for S3 static website hosting. For production use HTTPS and caching benefits via CloudFront.
+This site is deployed as a private S3 origin behind CloudFront, with Route 53 handling the public domain and ACM providing TLS.
+
+Current production stack
+
+- Domain: `amoljadhav.uk`
+- DNS: Route 53 alias `A` and `AAAA` records
+- CDN: CloudFront with HTTPS and `PriceClass_200`
+- Origin protection: Origin Access Control (OAC)
+- Origin bucket: private, versioned, encrypted S3 bucket `amol-portfolio-site-prod`
+- Origin contents: `index.html`, `style.css`, `script.js`, and `assets/`
+- TLS: ACM certificate in `us-east-1` with auto-renewal
+- Monitoring: CloudWatch metrics for requests, error rates, and cache hit ratio
+- Cost control: AWS Budgets with SNS alerts at 50%, 80%, 100%, and forecasted overspend
+- Resource organization: AWS Resource Groups using tags
+- Search visibility: Google Search Console for indexing and sitemap submission
 
 Important considerations
 
-- Keep the bucket content-type metadata correct (S3 sets this automatically for common extensions).
-- If you want SPA routing fallback, set the error document to `index.html`.
-- For secure serving and to avoid public buckets, use CloudFront with Origin Access Control (OAC) and keep the bucket private.
+- Keep the bucket private and let CloudFront access it through OAC only.
+- Keep the bucket content-type metadata correct, especially for `.webp`, `.svg`, `.css`, and `.js` files.
+- Invalidate CloudFront when `index.html` or swapped media assets change.
+- If you want SPA-style fallback behavior, configure CloudFront/S3 error handling to return `index.html` where appropriate.
 
-Example AWS CLI commands (replace BUCKET_NAME and REGION):
+Example AWS CLI commands (replace distribution and bucket identifiers as needed):
 
 ```bash
-# create bucket (US East example)
-aws s3 mb s3://BUCKET_NAME --region us-east-1
+# sync the site to the private origin bucket
+aws s3 sync . s3://amol-portfolio-site-prod --delete --exclude ".git/*"
 
-# sync local files to bucket and set files public (simple approach)
-aws s3 sync . s3://BUCKET_NAME --acl public-read --exclude ".git/*" --delete
-
-# enable static website (simple approach)
-aws s3 website s3://BUCKET_NAME --index-document index.html --error-document index.html
+# invalidate changed content in CloudFront
+aws cloudfront create-invalidation \
+  --distribution-id YOUR_DISTRIBUTION_ID \
+  --paths "/index.html" "/assets/media/*" "/style.css" "/script.js"
 ```
 
-Recommended production approach (private bucket + CloudFront)
+Recommended production flow
 
-1. Create S3 bucket (private)
-2. Upload files with `aws s3 sync . s3://BUCKET_NAME --delete` (no public ACL)
-3. Create CloudFront distribution with S3 origin and an Origin Access Control (OAC)
-4. Attach ACM certificate to CloudFront and map your domain to CloudFront
+1. User requests `amoljadhav.uk`
+2. Route 53 resolves the domain via alias `A` and `AAAA` records
+3. CloudFront serves the site over HTTPS from edge locations in North America, Europe, Asia, Middle East, and Africa via `PriceClass_200`
+4. CloudFront fetches site assets from the private S3 bucket using OAC-authenticated origin access
+5. Supporting AWS services handle certificate renewal, budgets, monitoring, and resource grouping
 
-Sample minimal CORS and bucket policy (use with care and adapt to your security posture):
+Supporting services
 
-```json
-// CORS (cors.json)
-[
-  {
-    "AllowedHeaders": ["*"],
-    "AllowedMethods": ["GET"],
-    "AllowedOrigins": ["*"],
-    "MaxAgeSeconds": 3000
-  }
-]
-```
-
-```json
-// Example public-read bucket policy (not recommended for private + CloudFront setups)
-{
-  "Version":"2012-10-17",
-  "Statement":[
-    {
-      "Sid":"PublicReadGetObject",
-      "Effect":"Allow",
-      "Principal":"*",
-      "Action":["s3:GetObject"],
-      "Resource":["arn:aws:s3:::BUCKET_NAME/*"]
-    }
-  ]
-}
-```
-
-For CloudFront + OAC, follow the AWS Console flow or use AWS CDK/Terraform. If you want, I can provide a CloudFront distribution JSON or an `aws cloudfront create-distribution` example.
+- ACM: SSL/TLS certificate in `us-east-1`, auto-renewing
+- AWS Budgets + SNS: cost alerts at 50%, 80%, 100%, plus forecast-based overspend notification
+- CloudWatch: requests, error rates, cache hit ratio
+- AWS Resource Groups: tag-based grouping for the portfolio stack
+- Google Search Console: indexing and sitemap submission
 
 ---
 
@@ -190,16 +181,20 @@ For CloudFront + OAC, follow the AWS Console flow or use AWS CDK/Terraform. If y
 
 ## Diagrams
 
-Architecture (hosting) — S3 + CloudFront
+Architecture (hosting) — Route 53, CloudFront, private S3
 
 ```mermaid
-flowchart LR
-  A["User Browser"] -->|HTTPS| C["CloudFront CDN"]
-  C -->|OAC| B["S3 Bucket private"]
-  C --> D["Optional Lambda at Edge"]
-  subgraph Optional
-    E["Backend API or Serverless"] --> F["Third party APIs"]
-  end
+flowchart TD
+  A["User Browser"] --> B["Route 53 DNS\namoljadhav.uk\nA and AAAA alias records"]
+  B --> C["CloudFront CDN\nHTTPS\nPriceClass_200"]
+  C -->|OAC| D["S3 Bucket private\nversioned and encrypted\namol-portfolio-site-prod"]
+  D --> E["Site files\nindex.html\nstyle.css\nscript.js\nassets"]
+
+  F["ACM certificate\nus-east-1\nauto-renew"] --> C
+  G["AWS Budgets and SNS\n50 80 100 percent\nforecast alerts"] --> C
+  H["CloudWatch\nrequests\nerror rates\ncache hit ratio"] --> C
+  I["AWS Resource Groups\ntag-based grouping"] --> D
+  J["Google Search Console\nindexing and sitemap"] --> A
 ```
 
 Infinity loop component flow

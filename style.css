@@ -268,6 +268,10 @@ main{ position:relative; z-index:1; }
 /* =============== HERO =============== */
 .hero{
   align-items:center; text-align:left; padding-left:calc(var(--rail-w) + var(--space-4));
+  --infinity-height: 860px;
+  --infinity-overlap: 10rem;
+  --infinity-gap: 1.75rem;
+  padding-bottom:calc(var(--infinity-height) - var(--infinity-overlap) + var(--infinity-gap));
 }
 .hero-content{ max-width:900px; position:relative; z-index:2; }
 .hero-content.glow-card{
@@ -283,7 +287,7 @@ main{ position:relative; z-index:1; }
 
 /* =============== INFINITY LOOP (behind hero) =============== */
 .infinity-wrap{
-  position:absolute; left:50%; top:calc(100% - 10rem); width:min(100vw, 1680px); height:860px;
+  position:absolute; left:50%; top:calc(100% - var(--infinity-overlap)); width:min(100vw, 1680px); height:var(--infinity-height);
   pointer-events:none; transform:translate(-50%, 0);
   z-index:0; opacity:0.78;
 }
@@ -323,8 +327,34 @@ main{ position:relative; z-index:1; }
 .icon-20{ left:27.7%; top:32.2%; }
 .icon-21{ left:35.9%; top:36.4%; }
 .icon-22{ left:45.2%; top:44.9%; }
-@media (max-width:960px){ .infinity-wrap{ width:96vw; height:580px; } .inf-icon{ width:62px; height:62px; } }
-@media (max-width:760px){ .infinity-wrap{ display:none; } }
+@media (max-width:960px){
+  .hero{
+    --infinity-height: 580px;
+    --infinity-gap: 1.25rem;
+  }
+  .infinity-wrap{ width:96vw; }
+  .inf-icon{ width:62px; height:62px; }
+}
+@media (max-width:760px){
+  .hero{
+    --infinity-height: 0px;
+    --infinity-overlap: 0rem;
+    --infinity-gap: 0rem;
+    padding-bottom:var(--space-6);
+  }
+  .infinity-wrap{ display:none; }
+  .inf-icon{ width:44px; height:44px; padding:8px; border-radius:16px; }
+}
+@media (max-width:520px){
+  .hero{
+    --infinity-height: 0px;
+    --infinity-overlap: 0rem;
+    --infinity-gap: 0rem;
+    padding-bottom:var(--space-5);
+  }
+  .inf-icon{ width:38px; height:38px; padding:7px; border-radius:14px; }
+  .inf-icon:nth-of-type(even){ display:none; }
+}
 
 .inf-icon{ will-change:transform; }
 
